@@ -1,3 +1,4 @@
+using Script.Character;
 using UnityEngine;
 
 namespace Assets.Script.Character
@@ -12,6 +13,7 @@ namespace Assets.Script.Character
 
         public override void OnStateEnter()
         {
+
             Character.Anim.Play("Idle");
             Character.Anim.SetBool(IsIdle, true);
         }
@@ -58,6 +60,7 @@ namespace Assets.Script.Character
 
         public override void OnStateEnter()
         {
+
             Character.Anim.Play("Jump");
         }
 

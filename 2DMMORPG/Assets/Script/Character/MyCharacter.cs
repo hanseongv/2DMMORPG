@@ -1,116 +1,134 @@
-using System;
-using Unity.VisualScripting;
+using System.Collections;
+using Assets.Script;
+using Assets.Script.Character;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.Script.Character
+namespace Script.Character
 {
     public partial class MyCharacter : BaseCharacter
     {
-        private Rigidbody2D _rigid;
-        private Collider2D _collider;
-
-        private float speed = 5.0f;
-
-        private float jumpForce = 16.0f;
-
-        private float groundCheckRadius = 0.1f;
-
-        public LayerMask groundLayer = 6;
-
-
         private BaseState _stateRun;
         private BaseState _stateJump;
         private BaseState _stateAttack;
+        private float _dirX;
 
         private void Start()
         {
             Init();
         }
 
-        protected override void Update()
-        {
-            base.Update();
-        }
-
-        private void FixedUpdate()
-        {
-            Move();
-            Jump();
-        }
-
         protected override void Init()
         {
             base.Init();
-            GetComponents();
+            BindGetComponent();
             _stateRun = new StateRun(this);
             _stateJump = new StateJump(this);
             _stateAttack = new StateAttack(this);
         }
 
-        private void GetComponents()
+        private void BindGetComponent()
         {
             Anim = GetComponentInChildren<Animator>();
             _rigid = GetComponentInChildren<Rigidbody2D>();
             _collider = GetComponentInChildren<Collider2D>();
         }
 
-        void Move()
+
+        private void FixedUpdate()
         {
-            // if (_rigid.velocity.y != 0 && IsGrounded())
-            // {
-            //     return;
-            // }
-
-            var dirX = Input.GetAxis("Horizontal");
-            TurnTransform(dirX);
-
-            _rigid.velocity = new Vector2(dirX * speed, _rigid.velocity.y);
-
-            if (IsGrounded() == false)
-                _stateMachine.ChangeState(_stateJump);
-            else if (dirX != 0)
-                _stateMachine.ChangeState(_stateRun);
-            else
-                _stateMachine.ChangeState(_stateIdle);
+            Move();
+            Jump();
+            UpdateState();
         }
 
-        private void TurnTransform(float dirX)
+        private void Move()
         {
-            if (dirX == 0)
+            _dirX = Input.GetAxis("Horizontal");
+            _rigid.velocity = new Vector2(_dirX * speed, _rigid.velocity.y);
+
+            if (_dirX == 0) return;
+
+            transform.localRotation = Quaternion.Euler(0.0f, (0 < _dirX ? 180.0f : 0.0f), 0.0f);
+        }
+
+        private void UpdateState()
+        {
+            if (IsGrounded() == false) _stateMachine.ChangeState(_stateJump);
+            else if (_dirX == 0.0f) _stateMachine.ChangeState(_stateIdle);
+            else _stateMachine.ChangeState(_stateRun);
+        }
+
+        private void Jump()
+        {
+            if (0.1f < _rigid.velocity.y)
                 return;
-            var y = 0.0f < dirX ? 180.0f : 0.0f;
-            transform.localRotation = Quaternion.Euler(0.0f, y, 0.0f);
+
+            if (Input.GetKey(KeyCode.DownArrow) && IsGrounded())
+            {
+                if (Input.GetKeyDown(KeyCode.LeftAlt) && _isDownJumping is false)
+                {
+                    DisablePlatformCollider().Forget();
+                }
+            }
+            else if (Input.GetKey(KeyCode.LeftAlt) && IsGrounded())
+            {
+                _rigid.velocity = new Vector2(_rigid.velocity.x, JumpForce);
+            }
         }
 
-        void Jump()
+        private bool _isDownJumping;
+
+        private async UniTaskVoid DisablePlatformCollider()
         {
-            if (!Input.GetKey(KeyCode.LeftAlt) || !IsGrounded()) return;
-            _rigid.velocity = new Vector2(_rigid.velocity.x, jumpForce);
+            _isDownJumping = true;
+            var targetPosY = transform.position.y - 1.645f;
+
+            EnableCollider(true);
+            while (targetPosY < transform.position.y)
+            {
+                await UniTask.Yield(PlayerLoopTiming.Update); 
+            }
+
+            EnableCollider(false);
+            _isDownJumping = false;
         }
-
-
+      
         private void EnableCollider(bool enable)
         {
-            _collider.enabled = enable;
+            _collider.isTrigger = enable;
         }
     }
 
     partial class MyCharacter
     {
-        private const float Radius = 0.3f;
-        private const float CastDistance = 0.3f;
+        [SerializeField] private float CastDistance = 0.45f;
+
+        private readonly Vector2 _groundCheckBoxSize = new Vector2(0.56f, 0.03f);
+
+        // private static readonly int GroundLayer = LayerMask.NameToLayer("Ground");
+        [SerializeField] private LayerMask _groundLayerMask = 1 << 6;
 
         private bool IsGrounded()
         {
-            if (0.0f < _rigid.velocity.y)
-                return false;
-            
-            return Physics2D.CircleCast(
-                _collider.bounds.center, // 시작점
-                Radius, // 반지름
-                Vector2.down, // 방향
-                CastDistance, // 거리
-                groundLayer);
+            return Physics2D.BoxCast(_collider.bounds.center, _groundCheckBoxSize, 0f, Vector2.down,
+                CastDistance,
+                _groundLayerMask);
         }
+
+        private RaycastHit2D HitGround()
+        {
+            return Physics2D.BoxCast(_collider.bounds.center, _groundCheckBoxSize, 0f, Vector2.down,
+                CastDistance,
+                _groundLayerMask);
+        }
+
+        // private void OnDrawGizmos()
+        // {
+        //     Vector2 boxDirection = _collider.bounds.center;
+        //     Gizmos.color = Color.black;
+        //     var finalPosition = boxDirection + Vector2.down * CastDistance;
+        //     Gizmos.DrawWireCube(finalPosition, _groundCheckBoxSize);
+        // }
     }
 }

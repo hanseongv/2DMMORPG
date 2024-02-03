@@ -1,4 +1,5 @@
 using Assets.Script.Character;
+using Script.Character;
 
 namespace Assets.Script
 {
