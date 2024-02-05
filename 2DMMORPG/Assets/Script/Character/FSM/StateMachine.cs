@@ -1,3 +1,5 @@
+using Script.Character.FSM;
+
 namespace Assets.Script.Character
 {
     public class StateMachine

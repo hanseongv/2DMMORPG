@@ -1,13 +1,11 @@
-using Script.Character;
 using UnityEngine;
 
-namespace Assets.Script.Character
+namespace Script.Character.FSM
 {
     public class StateIdle : BaseState
     {
-        private static readonly int IsIdle = Animator.StringToHash("isIdle");
 
-        public StateIdle(BaseCharacter character) : base(character)
+        public StateIdle(BaseCreature character) : base(character)
         {
         }
 
@@ -15,7 +13,7 @@ namespace Assets.Script.Character
         {
 
             Character.Anim.Play("Idle");
-            Character.Anim.SetBool(IsIdle, true);
+            Character.Anim.SetBool("isIdle", true);
         }
 
         public override void OnStateUpdate()
@@ -24,7 +22,7 @@ namespace Assets.Script.Character
 
         public override void OnStateExit()
         {
-            Character.Anim.SetBool(IsIdle, false);
+            Character.Anim.SetBool("isIdle", false);
         }
     }
 
@@ -32,7 +30,7 @@ namespace Assets.Script.Character
     {
         private static readonly int IsRun = Animator.StringToHash("isRun");
 
-        public StateRun(BaseCharacter character) : base(character)
+        public StateRun(BaseCreature character) : base(character)
         {
         }
 
@@ -54,7 +52,7 @@ namespace Assets.Script.Character
 
     public class StateJump : BaseState
     {
-        public StateJump(BaseCharacter character) : base(character)
+        public StateJump(BaseCreature character) : base(character)
         {
         }
 
@@ -75,7 +73,7 @@ namespace Assets.Script.Character
 
     public class StateAttack : BaseState
     {
-        public StateAttack(BaseCharacter character) : base(character)
+        public StateAttack(BaseCreature character) : base(character)
         {
         }
 
@@ -89,6 +87,29 @@ namespace Assets.Script.Character
 
         public override void OnStateExit()
         {
+        }
+    }
+    public class StateHit : BaseState
+    {
+
+        public StateHit(BaseCreature character) : base(character)
+        {
+        }
+
+        public override void OnStateEnter()
+        {
+
+            Character.Anim.Play("Hit");
+            // Character.Anim.SetBool(IsIdle, true);
+        }
+
+        public override void OnStateUpdate()
+        {
+        }
+
+        public override void OnStateExit()
+        {
+            // Character.Anim.SetBool(IsIdle, false);
         }
     }
 }
