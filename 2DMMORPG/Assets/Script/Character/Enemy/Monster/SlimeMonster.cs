@@ -27,10 +27,10 @@ namespace Script.Character.Enemy.Monster
         protected override void Update()
         {
             base.Update();
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                Hit(obj.transform.position, 1);
-            }
+            // if (Input.GetKeyDown(KeyCode.Alpha1))
+            // {
+            //     Hit(obj.transform.position, 1);
+            // }
         }
 
         private CancellationTokenSource _asyncHitToken;

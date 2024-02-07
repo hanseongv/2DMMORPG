@@ -1381,10 +1381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1dda2620829d486d917430f6498551a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CastDistance: 0.45
-  _groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
+  itemNum: 0
 --- !u!50 &7824371828600791493
 Rigidbody2D:
   serializedVersion: 4
@@ -1683,7 +1680,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5625, y: 0.53125}
+  m_Size: {x: 0.59375, y: 0.5625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0

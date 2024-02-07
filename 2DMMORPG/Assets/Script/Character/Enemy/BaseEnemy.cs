@@ -43,12 +43,11 @@ namespace Script.Character.Enemy
             Col = GetComponentInChildren<Collider2D>();
         }
 
-        protected override void Hit(Vector2 attackerPos,int damage)
+        protected override void Hit(Vector2 attackerPos, int damage)
         {
-            base.Hit(attackerPos,damage);
-            _tempAutoStateChangeToken.Cancel();
+            base.Hit(attackerPos, damage);
+            _tempAutoStateChangeToken?.Cancel();
         }
-
 
 
         protected async UniTaskVoid AsyncHit(float time, CancellationToken cancellationToken = default)
@@ -64,12 +63,11 @@ namespace Script.Character.Enemy
 
         private void TempAutoStateChange()
         {
-
-            if (_curMonsterState is not MonsterState.Idle or MonsterState.Patrolling)
+            if (_curMonsterState is not (MonsterState.Idle or MonsterState.Patrolling))
                 return;
-
             _tempAutoStateChangeToken = new CancellationTokenSource();
             _curMonsterState = (MonsterState)Random.Range(0, 2);
+            _curMonsterState = MonsterState.Patrolling;
             var time = Random.Range(2.0f, 10.0f);
             var dirX = Random.Range(0, 2) == 0 ? -1 : 1;
             TurnCreature(dirX);
@@ -104,13 +102,14 @@ namespace Script.Character.Enemy
                 while (true)
                 {
                     cancellationToken.ThrowIfCancellationRequested();
-                    Rigid.velocity = new Vector2(dirX * Speed, Rigid.velocity.y);
                     await UniTask.Yield(PlayerLoopTiming.Update);
+                    if (Rigid.velocity.y is >= 0.1f or >= 0.1f)
+                        continue;
+                    Rigid.velocity = new Vector2(dirX * Speed, Rigid.velocity.y);
 
                     if (IsGrounded()) break;
                 }
             }
-
             TempAutoStateChange();
         }
 
