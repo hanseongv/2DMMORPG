@@ -30,13 +30,13 @@ namespace Script.Character
         public string Name;
     }
 
-    public class SpriteList
+    public class CharacterSprite
     {
-        private BaseCreature _baseCreature;
+        private BaseCharacter _baseCharacter;
 
-        public SpriteList(BaseCreature baseCreature)
+        public CharacterSprite(BaseCharacter baseCharacter)
         {
-            _baseCreature = baseCreature;
+            _baseCharacter = baseCharacter;
         }
 
         public List<List<SpriteRenderer>> _spriteList = new List<List<SpriteRenderer>>();
@@ -52,58 +52,56 @@ namespace Script.Character
 
         public void Init()
         {
-            var transform = _baseCreature.transform;
+            var transform = _baseCharacter.transform;
             var sr = new List<SpriteRenderer>();
             FindAllSpriteRenderersInChildren(transform, sr);
 
-            if (_baseCreature as BaseCharacter)
+
+            foreach (var v in sr)
             {
-                foreach (var v in sr)
+                switch (v.name)
                 {
-                    switch (v.name)
-                    {
-                        case "6_R_Eye":
-                        case "6_L_Eye":
-                            _eyeList.Add(v);
-                            break;
-                        case "Body":
-                        case "5_Head":
-                        case "20_L_Arm":
-                        case "20_R_Arm":
-                        case "_10R_Foot":
-                        case "_5L_Foot":
-                            _bodyList.Add(v);
-                            break;
-                        case "6_FaceHair":
-                        case "10_Hair":
-                        case "11_Helmet1":
-                        case "12_Helmet2":
-                            _hairList.Add(v);
-                            break;
-                        case "ClothBody":
-                        case "21_LCArm":
-                        case "-19_RCArm":
-                            _clothList.Add(v);
-                            break;
-                        case "BodyArmor":
-                        case "25_L_Shoulder":
-                        case "-15_R_Shoulder":
-                            _armorList.Add(v);
-                            break;
-                        case "_9R_Cloth":
-                        case "_4L_Cloth":
-                            _pantList.Add(v);
-                            break;
-                        case "L_Weapon":
-                        case "L_Shield":
-                        case "R_Weapon":
-                        case "R_Shield":
-                            _weaponList.Add(v);
-                            break;
-                        case "Back":
-                            _backList.Add(v);
-                            break;
-                    }
+                    case "6_R_Eye":
+                    case "6_L_Eye":
+                        _eyeList.Add(v);
+                        break;
+                    case "Body":
+                    case "5_Head":
+                    case "20_L_Arm":
+                    case "20_R_Arm":
+                    case "_10R_Foot":
+                    case "_5L_Foot":
+                        _bodyList.Add(v);
+                        break;
+                    case "6_FaceHair":
+                    case "10_Hair":
+                    case "11_Helmet1":
+                    case "12_Helmet2":
+                        _hairList.Add(v);
+                        break;
+                    case "ClothBody":
+                    case "21_LCArm":
+                    case "-19_RCArm":
+                        _clothList.Add(v);
+                        break;
+                    case "BodyArmor":
+                    case "25_L_Shoulder":
+                    case "-15_R_Shoulder":
+                        _armorList.Add(v);
+                        break;
+                    case "_9R_Cloth":
+                    case "_4L_Cloth":
+                        _pantList.Add(v);
+                        break;
+                    case "L_Weapon":
+                    case "L_Shield":
+                    case "R_Weapon":
+                    case "R_Shield":
+                        _weaponList.Add(v);
+                        break;
+                    case "Back":
+                        _backList.Add(v);
+                        break;
                 }
             }
 

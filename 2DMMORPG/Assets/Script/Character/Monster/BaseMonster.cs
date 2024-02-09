@@ -1,7 +1,6 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Script.Character.FSM;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -16,12 +15,9 @@ namespace Script.Character.Enemy
         Attacking // 몬스터가 플레이어를 공격하는 상태
     }
 
-    public class BaseEnemy : BaseCreature
+    public class BaseMonster : BaseCharacter
     {
-        internal MonsterState _curMonsterState;
-        // private BaseState _stateRun;
-        // private BaseState _stateJump;
-        // private BaseState _stateAttack;
+        internal MonsterState CurMonsterState;
 
         private void Start()
         {
@@ -33,7 +29,7 @@ namespace Script.Character.Enemy
         {
             base.Init();
             BindGetComponent();
-            _curMonsterState = MonsterState.Idle;
+            CurMonsterState = MonsterState.Idle;
         }
 
         private void BindGetComponent()
@@ -54,7 +50,7 @@ namespace Script.Character.Enemy
         {
             await UniTask.Delay((int)(time * 1000), cancellationToken: cancellationToken);
             StateMachine.ChangeState(StateIdle);
-            _curMonsterState = MonsterState.Idle;
+            CurMonsterState = MonsterState.Idle;
             // TempAutoStateChange();
             // isHit = false;
         }
@@ -63,16 +59,16 @@ namespace Script.Character.Enemy
 
         private void TempAutoStateChange()
         {
-            if (_curMonsterState is not (MonsterState.Idle or MonsterState.Patrolling))
+            if (CurMonsterState is not (MonsterState.Idle or MonsterState.Patrolling))
                 return;
             _tempAutoStateChangeToken = new CancellationTokenSource();
-            _curMonsterState = (MonsterState)Random.Range(0, 2);
-            _curMonsterState = MonsterState.Patrolling;
+            CurMonsterState = (MonsterState)Random.Range(0, 2);
+            CurMonsterState = MonsterState.Patrolling;
             var time = Random.Range(2.0f, 10.0f);
             var dirX = Random.Range(0, 2) == 0 ? -1 : 1;
             TurnCreature(dirX);
 
-            switch (_curMonsterState)
+            switch (CurMonsterState)
             {
                 case MonsterState.Idle:
                     AsyncIdle(time, _tempAutoStateChangeToken.Token).Forget();
@@ -110,6 +106,7 @@ namespace Script.Character.Enemy
                     if (IsGrounded()) break;
                 }
             }
+
             TempAutoStateChange();
         }
 
@@ -117,6 +114,15 @@ namespace Script.Character.Enemy
         {
             await UniTask.Delay((int)(time * 1000), cancellationToken: cancellationToken);
             TempAutoStateChange();
+        }
+
+        protected override bool IsGrounded()
+        {
+            var bounds = Col.bounds;
+            var distance = bounds.size.y / 2.0f + 0.1f;
+
+            return Physics2D.Raycast(bounds.center, Vector2.down, distance,
+                GroundLayerMask);
         }
     }
 }

@@ -1,17 +1,17 @@
+using Script.Character;
+using Script.Creature.FSM;
 using UnityEngine;
 
-namespace Script.Character.FSM
+namespace Script.Creature.Character
 {
-    public class StateIdle : BaseState
+    public class CharacterStateIdle : BaseState
     {
-
-        public StateIdle(BaseCreature character) : base(character)
+        public CharacterStateIdle(BaseCharacter character) : base(character)
         {
         }
 
         public override void OnStateEnter()
         {
-
             Character.Anim.Play("Idle");
             Character.Anim.SetBool("isIdle", true);
         }
@@ -26,11 +26,11 @@ namespace Script.Character.FSM
         }
     }
 
-    public class StateRun : BaseState
+    public class CharacterStateRun : BaseState
     {
         private static readonly int IsRun = Animator.StringToHash("isRun");
 
-        public StateRun(BaseCreature character) : base(character)
+        public CharacterStateRun(BaseCharacter character) : base(character)
         {
         }
 
@@ -50,15 +50,14 @@ namespace Script.Character.FSM
         }
     }
 
-    public class StateJump : BaseState
+    public class CharacterStateJump : BaseState
     {
-        public StateJump(BaseCreature character) : base(character)
+        public CharacterStateJump(BaseCharacter character) : base(character)
         {
         }
 
         public override void OnStateEnter()
         {
-
             Character.Anim.Play("Jump");
         }
 
@@ -71,9 +70,9 @@ namespace Script.Character.FSM
         }
     }
 
-    public class StateAttack : BaseState
+    public class CharacterStateAttack : BaseState
     {
-        public StateAttack(BaseCreature character) : base(character)
+        public CharacterStateAttack(BaseCharacter character) : base(character)
         {
         }
 
@@ -89,16 +88,15 @@ namespace Script.Character.FSM
         {
         }
     }
-    public class StateHit : BaseState
-    {
 
-        public StateHit(BaseCreature character) : base(character)
+    public class CharacterStateHit : BaseState
+    {
+        public CharacterStateHit(BaseCharacter character) : base(character)
         {
         }
 
         public override void OnStateEnter()
         {
-
             Character.Anim.Play("Hit");
             // Character.Anim.SetBool(IsIdle, true);
         }

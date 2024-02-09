@@ -1,4 +1,4 @@
-using Script.Character.FSM;
+using Script.Creature.FSM;
 
 namespace Assets.Script.Character
 {

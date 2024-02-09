@@ -1,11 +1,13 @@
 using System;
 using Assets.Script.Character;
-using Script.Character.FSM;
+using Script.Creature.Character;
+using Script.Creature.FSM;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Script.Character
 {
-    partial class BaseCreature
+    partial class BaseCharacter
     {
         #region Field
 
@@ -14,7 +16,7 @@ namespace Script.Character
         private int _health;
         protected float Speed = 5.0f;
         protected const float JumpForce = 16.0f;
-        protected bool isHit;
+        protected bool IsHit;
 
         #endregion
 
@@ -41,17 +43,16 @@ namespace Script.Character
         protected internal Animator Anim;
         protected StateMachine StateMachine;
         protected BaseState StateIdle;
-        private readonly LayerMask _groundLayerMask = 1 << 6;
+        protected readonly LayerMask GroundLayerMask = 1 << 6;
 
         #endregion
     }
 
-    public partial class BaseCreature : MonoBehaviour
+    public partial class BaseCharacter : MonoBehaviour
     {
         protected virtual void Init()
         {
-            StateIdle = new StateIdle(this);
-            StateMachine = new StateMachine(StateIdle);
+           
         }
 
         protected virtual void Update()
@@ -84,12 +85,12 @@ namespace Script.Character
             Col.isTrigger = enable;
         }
 
-        protected bool IsGrounded()
+        protected virtual bool IsGrounded()
         {
             var bounds = Col.bounds;
-            var distance = bounds.size.y / 2.0f + 0.1f;
-            return Physics2D.Raycast(bounds.center, Vector2.down, distance,
-                _groundLayerMask);
+            var distance = 0.1f;
+            return Physics2D.BoxCast(transform.position, bounds.size, 0, Vector2.down, distance,
+                GroundLayerMask);
         }
     }
 }

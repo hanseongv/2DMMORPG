@@ -1,16 +1,20 @@
-namespace Script.Character.FSM
+using Script.Character;
+
+namespace Script.Creature.FSM
 {
     public abstract class BaseState
     {
-        protected BaseState(BaseCreature character)
+        protected BaseState(BaseCharacter character)
         {
             Character = character;
         }
 
-        internal readonly BaseCreature Character;
+        internal readonly BaseCharacter Character;
 
         public abstract void OnStateEnter();
         public abstract void OnStateUpdate();
         public abstract void OnStateExit();
     }
+
+    
 }
