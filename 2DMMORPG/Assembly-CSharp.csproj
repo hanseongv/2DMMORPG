@@ -53,6 +53,7 @@
      <Compile Include="Assets/Script/Character/Human/BaseHuman.cs" />
      <Compile Include="Assets/GPM/Shader/Sample/Scripts/ScrollUV.cs" />
      <Compile Include="Assets/Script/Manager/ResoureceManager.cs" />
+     <Compile Include="Assets/Script/Character/Human/AnimationEventPlayer.cs" />
      <Compile Include="Assets/GPM/Shader/Sample/Scripts/Dissolve.cs" />
      <Compile Include="Assets/Script/Character/Monster/BaseMonster.cs" />
      <Compile Include="Assets/Script/Character/Human/MyPlayer.cs" />

@@ -36,7 +36,7 @@ namespace Script.Character.Enemy
         {
             Anim = GetComponentInChildren<Animator>();
             Rigid = GetComponentInChildren<Rigidbody2D>();
-            Col = GetComponentInChildren<Collider2D>();
+            col = GetComponentInChildren<Collider2D>();
         }
 
         protected override void Hit(Vector2 attackerPos, int damage)
@@ -110,7 +110,7 @@ namespace Script.Character.Enemy
             TempAutoStateChange();
         }
 
-        private async UniTask AsyncIdle(float time, CancellationToken cancellationToken = default)
+        private async UniTaskVoid AsyncIdle(float time, CancellationToken cancellationToken = default)
         {
             await UniTask.Delay((int)(time * 1000), cancellationToken: cancellationToken);
             TempAutoStateChange();
@@ -118,7 +118,7 @@ namespace Script.Character.Enemy
 
         protected override bool IsGrounded()
         {
-            var bounds = Col.bounds;
+            var bounds = col.bounds;
             var distance = bounds.size.y / 2.0f + 0.1f;
 
             return Physics2D.Raycast(bounds.center, Vector2.down, distance,

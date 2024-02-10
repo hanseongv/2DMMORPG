@@ -1,5 +1,6 @@
 using System;
 using Assets.Script.Character;
+using Cysharp.Threading.Tasks;
 using Script.Creature.Character;
 using Script.Creature.FSM;
 using UnityEngine;
@@ -16,7 +17,11 @@ namespace Script.Character
         private int _health;
         protected float Speed = 5.0f;
         protected const float JumpForce = 16.0f;
+        public float attackCoolTime = 0.5f;
+        public bool isAttack;
+        public bool isCanAttack;
         protected bool IsHit;
+        public float attackRange;
 
         #endregion
 
@@ -39,11 +44,13 @@ namespace Script.Character
         }
 
         protected Rigidbody2D Rigid;
-        protected Collider2D Col;
+        public Collider2D col;
         protected internal Animator Anim;
         protected StateMachine StateMachine;
         protected BaseState StateIdle;
+        protected readonly LayerMask PlayerLayerMask = 1 << 3;
         protected readonly LayerMask GroundLayerMask = 1 << 6;
+        public readonly LayerMask MonsterLayerMask = 1 << 8;
 
         #endregion
     }
@@ -52,7 +59,7 @@ namespace Script.Character
     {
         protected virtual void Init()
         {
-           
+            isCanAttack = true;
         }
 
         protected virtual void Update()
@@ -82,15 +89,21 @@ namespace Script.Character
 
         protected void EnableCollider(bool enable)
         {
-            Col.isTrigger = enable;
+            col.isTrigger = enable;
         }
 
         protected virtual bool IsGrounded()
         {
-            var bounds = Col.bounds;
+            var bounds = col.bounds;
             var distance = 0.1f;
             return Physics2D.BoxCast(transform.position, bounds.size, 0, Vector2.down, distance,
                 GroundLayerMask);
+        }
+
+        internal async UniTaskVoid AsyncAttackCoolTime()
+        {
+            await UniTask.Delay((int)(attackCoolTime * 1000));
+            isCanAttack = true;
         }
     }
 }

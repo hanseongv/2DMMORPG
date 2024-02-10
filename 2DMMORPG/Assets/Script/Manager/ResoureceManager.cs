@@ -1,7 +1,8 @@
 using UnityEngine;
 
-namespace Script
+namespace Script.Manager
 {
+    //에셋번들로 변경 예정
     public class ResoureceManager
     {
         internal T[] LoadAllResources<T>(string path) where T : Object

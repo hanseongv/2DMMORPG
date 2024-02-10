@@ -1,8 +1,7 @@
-using Script.Character;
 using Script.Creature.FSM;
 using UnityEngine;
 
-namespace Script.Creature.Character
+namespace Script.Character.Human
 {
     public class CharacterStateIdle : BaseState
     {
@@ -12,7 +11,9 @@ namespace Script.Creature.Character
 
         public override void OnStateEnter()
         {
-            Character.Anim.Play("Idle");
+            // Character.Anim.Play("Idle");
+            Character.Anim.SetTrigger("doIdle");
+            // Play();
             Character.Anim.SetBool("isIdle", true);
         }
 
@@ -36,7 +37,9 @@ namespace Script.Creature.Character
 
         public override void OnStateEnter()
         {
-            Character.Anim.Play("Run");
+            // Character.Anim.Play("Run");
+            Character.Anim.SetTrigger("doRun");
+
             Character.Anim.SetBool(IsRun, true);
         }
 
@@ -58,7 +61,8 @@ namespace Script.Creature.Character
 
         public override void OnStateEnter()
         {
-            Character.Anim.Play("Jump");
+            // Character.Anim.Play("Jump");
+            Character.Anim.SetTrigger("doJump");
         }
 
         public override void OnStateUpdate()
@@ -78,6 +82,11 @@ namespace Script.Creature.Character
 
         public override void OnStateEnter()
         {
+            Character.isAttack = true;
+            Character.isCanAttack = false;
+
+            // Character.Anim.Play("Attack");
+            Character.Anim.SetTrigger("doAttack");
         }
 
         public override void OnStateUpdate()
@@ -98,6 +107,7 @@ namespace Script.Creature.Character
         public override void OnStateEnter()
         {
             Character.Anim.Play("Hit");
+
             // Character.Anim.SetBool(IsIdle, true);
         }
 
