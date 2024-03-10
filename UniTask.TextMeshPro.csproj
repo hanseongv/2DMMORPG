@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{d82744d2-9777-5249-5fd1-3796c3eeaa55}</ProjectGuid>
+    <ProjectGuid>{4364a26b-18c0-5f74-3868-19df33428bd5}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>UniTask.TextMeshPro</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -25,8 +25,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2022_3_13;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <OutputPath>Temp\Bin\Debug\UniTask.TextMeshPro\</OutputPath>
+    <DefineConstants>UNITY_2022_3_13;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITASK_TEXTMESHPRO_SUPPORT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -45,109 +45,10 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.13f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets/Script/Character/BaseCharacter.cs" />
-     <Compile Include="Assets/GPM/Shader/Sample/Scripts/ScrollUVLayer.cs" />
-     <Compile Include="Assets/Script/Utils/MSingleton.cs" />
-     <Compile Include="Assets/Script/Manager/GameManager.cs" />
-     <Compile Include="Assets/GPM/Shader/Sample/Scripts/SwitchTexture.cs" />
-     <Compile Include="Assets/Script/Character/Human/BaseHuman.cs" />
-     <Compile Include="Assets/GPM/Shader/Sample/Scripts/ScrollUV.cs" />
-     <Compile Include="Assets/Script/Manager/ResoureceManager.cs" />
-     <Compile Include="Assets/Script/Character/Human/AnimationEventPlayer.cs" />
-     <Compile Include="Assets/GPM/Shader/Sample/Scripts/Dissolve.cs" />
-     <Compile Include="Assets/Script/Character/Monster/BaseMonster.cs" />
-     <Compile Include="Assets/Script/Character/Human/MyPlayer.cs" />
-     <Compile Include="Assets/Script/FSM/StateMachine.cs" />
-     <Compile Include="Assets/Script/Character/Monster/SlimeMonster.cs" />
-     <Compile Include="Assets/Script/Character/Monster/MonsterState.cs" />
-     <Compile Include="Assets/Script/Character/Human/HumanState.cs" />
-     <Compile Include="Assets/GPM/Shader/Sample/Scripts/Sepia.cs" />
-     <Compile Include="Assets/Script/FSM/BaseState.cs" />
-     <Compile Include="Assets/GPM/Shader/Sample/Scripts/Grayscale.cs" />
-     <Compile Include="Assets/Script/Character/Human/HumanSprite.cs" />
-     <Compile Include="Assets/GPM/Shader/Sample/Scripts/SpriteAnimation.cs" />
-     <Compile Include="Assets/GPM/Shader/Sample/Scripts/Zoom.cs" />
-     <Compile Include="Assets/GPM/Shader/Scripts/GpmShader.cs" />
-     <Folder Include="Assets" />
-     <Folder Include="Assets/Images/Ect" />
-     <Folder Include="Assets/Resources" />
-     <Folder Include="Assets/Resources/Character/Items/0_Hair" />
-     <Folder Include="Assets/Images/Enemies/Radish" />
-     <Folder Include="Assets/Images/Enemies/BlueBird" />
-     <Folder Include="Assets/Resources/Character/Items/2_Cloth" />
-     <Folder Include="Assets/Images/Enemies/Rino" />
-     <Folder Include="Assets/Settings" />
-     <Folder Include="Assets/Images/Enemies/Bat" />
-     <Folder Include="Assets/GPM" />
-     <Folder Include="Assets/Animation/Enemies/Slime" />
-     <Folder Include="Assets/Images/Item" />
-     <Folder Include="Assets/Images/Backgrounds" />
-     <Folder Include="Assets/Images/Enemies/Chicken" />
-     <Folder Include="Assets/Images/Enemies/FatBird" />
-     <Folder Include="Assets/Script/Character/Monster" />
-     <Folder Include="Assets/Images/Enemies/Ghost" />
-     <Folder Include="Assets/Resources/Character/Items/5_Armor" />
-     <Folder Include="Assets/GPM/Shader/Sample/Scripts" />
-     <Folder Include="Assets/Animation/Enemies" />
-     <Folder Include="Assets/Images/Enemies/Bee" />
-     <Folder Include="Assets/Images/Enemies/Slime" />
-     <Folder Include="Assets/Images/Character/BodySource/Species/0_Human" />
-     <Folder Include="Assets/Resources/Character" />
-     <Folder Include="Assets/GPM/Shader" />
-     <None Include="Assets/GPM/Shader/Shaders/GpmGrayscale.shader" />
-     <Folder Include="Assets/Images/Materials" />
-     <Folder Include="Assets/Images/Enemies/Skull" />
-     <Folder Include="Assets/GPM/Shader/Shaders" />
-     <Folder Include="Assets/Animation/Player" />
-     <None Include="Assets/GPM/Shader/Shaders/GpmSwitchTexture.shader" />
-     <Folder Include="Assets/Settings/Scenes" />
-     <Folder Include="Assets/Resources/Character/Items" />
-     <Folder Include="Assets/Images/Enemies" />
-     <Folder Include="Assets/Images/Enemies/Duck" />
-     <Folder Include="Assets/Images" />
-     <Folder Include="Assets/Images/Enemies/Plant" />
-     <Folder Include="Assets/Script/Utils" />
-     <Folder Include="Assets/TileMap/Background" />
-     <Folder Include="Assets/Resources/Character/Items/Shoulder" />
-     <Folder Include="Assets/GPM/Shader/Materials" />
-     <None Include="Assets/GPM/Shader/Shaders/GpmSepia.shader" />
-     <Folder Include="Assets/Script/Character/Human" />
-     <Folder Include="Assets/Images/UI" />
-     <None Include="Assets/GPM/Shader/Shaders/GpmSpriteAnimation.shader" />
-     <Folder Include="Assets/Images/Enemies/Mushroom" />
-     <Folder Include="Assets/Script" />
-     <Folder Include="Assets/TileMap/Map" />
-     <Folder Include="Assets/Resources/Character/Items/6_Weapons" />
-     <Folder Include="Assets/GPM/Shader/Sample" />
-     <None Include="Assets/GPM/Shader/Shaders/GpmScrollUVLayer.shader" />
-     <Folder Include="Assets/TileMap" />
-     <Folder Include="Assets/Images/Enemies/Rocks" />
-     <Folder Include="Assets/Animation/Player/Clip" />
-     <None Include="Assets/GPM/Shader/Shaders/GpmScrollUV.shader" />
-     <Folder Include="Assets/Images/Enemies/Snail" />
-     <Folder Include="Assets/Script/FSM" />
-     <Folder Include="Assets/GPM/Shader/Textures" />
-     <Folder Include="Assets/Images/Character/BodySource/Eyes" />
-     <Folder Include="Assets/Script/Manager" />
-     <Folder Include="Assets/Script/Character" />
-     <Folder Include="Assets/Resources/Character/Items/1_FaceHair" />
-     <Folder Include="Assets/GPM/Shader/Scripts" />
-     <Folder Include="Assets/Images/Enemies/Turtle" />
-     <None Include="Assets/GPM/Shader/Shaders/GpmZoom.shader" />
-     <None Include="Assets/GPM/Shader/Shaders/GpmDissolve.shader" />
-     <Folder Include="Assets/Animation" />
-     <Folder Include="Assets/Images/Character/BodySource/Species" />
-     <Folder Include="Assets/Images/Enemies/Chameleon" />
-     <Folder Include="Assets/Images/Character/BodySource" />
-     <Folder Include="Assets/Scenes" />
-     <Folder Include="Assets/Images/Map" />
-     <Folder Include="Assets/Resources/Character/Items/4_Helmet" />
-     <Folder Include="Assets/Images/Enemies/Trunk" />
-     <Folder Include="Assets/Images/Enemies/Bunny" />
-     <Folder Include="Assets/Resources/Character/Items/7_Back" />
-     <Folder Include="Assets/Images/Enemies/AngryPig" />
-     <Folder Include="Assets/Images/Character" />
-     <Folder Include="Assets/Resources/Character/Items/3_Pant" />
+     <Compile Include="Assets/Plugins/UniTask/Runtime/External/TextMeshPro/TextMeshProAsyncExtensions.cs" />
+     <Compile Include="Assets/Plugins/UniTask/Runtime/External/TextMeshPro/TextMeshProAsyncExtensions.InputField.cs" />
+     <Folder Include="Assets/Plugins/UniTask/Runtime/External/TextMeshPro" />
+     <None Include="Assets/Plugins/UniTask/Runtime/External/TextMeshPro/UniTask.TextMeshPro.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -397,11 +298,50 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.Graphs">
+     <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.WebGL.Extensions">
+     <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.OSXStandalone.Extensions">
+     <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.Android.Extensions">
+     <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions">
+     <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+     <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.YamlDotNet">
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Collections.LowLevel.ILSupport">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/PackageCache/com.unity.collab-proxy@2.2.0/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/PackageCache/com.unity.collab-proxy@2.2.0/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Newtonsoft.Json">
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/PackageCache/com.unity.collab-proxy@2.2.0/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/PackageCache/com.unity.collab-proxy@2.2.0/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.IonicZip">
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.TextureAssets">
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -784,201 +724,20 @@
      <Reference Include="mscorlib">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.13f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Common.Path.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Common.Path.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.PixelPerfect.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Aseprite.Common">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Aseprite.Common.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Collections">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.SpriteShape.Runtime">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.PixelPerfect">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
-     </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Aseprite.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Aseprite.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Sysroot.Linux_x86_64">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
-     </Reference>
-     <Reference Include="PsdPlugin">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Animation.Runtime">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Tilemap.Extras">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.005">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.005.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InternalAPIEngineBridge.001">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Common.Runtime">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Toolchain.Macos-arm64-Linux-x86_64">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Toolchain.Macos-arm64-Linux-x86_64.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.SysrootPackage.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Searcher.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.State">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.SpriteShape.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.IK.Editor">
-     <HintPath>/Users/jeonghanseong/hanseong/UnityProject/2DMMORPG/2DMMORPG/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+     <HintPath>/Users/jeonghanseong/Unity/2DMMORPG/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UniTask.Addressables.csproj">
-      <Project>{2c31fd25-1bcc-e23c-4f85-44e3c75d8c0d}</Project>
-      <Name>UniTask.Addressables</Name>
-    </ProjectReference>
     <ProjectReference Include="UniTask.csproj">
       <Project>{2d7b1f07-3a0e-cb31-c15d-d1277109da47}</Project>
       <Name>UniTask</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniTask.TextMeshPro.csproj">
-      <Project>{4364a26b-18c0-5f74-3868-19df33428bd5}</Project>
-      <Name>UniTask.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniTask.Linq.csproj">
-      <Project>{95dd8899-5eeb-5a5a-3954-60afac921801}</Project>
-      <Name>UniTask.Linq</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniTask.DOTween.csproj">
-      <Project>{370384ef-eef1-6b24-bdda-09ddffda4c22}</Project>
-      <Name>UniTask.DOTween</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

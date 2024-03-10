@@ -124,8 +124,10 @@ namespace Script.Character.Human
 
             if (Input.GetKey(KeyCode.DownArrow) && IsGrounded())
             {
-                if (Input.GetKeyDown(KeyCode.LeftAlt) && _isDownJumping is false)
+                if (Input.GetKey(KeyCode.LeftAlt) && _isDownJumping is false)
                 {
+                                print("ㅊㅔ크2");
+
                     AsyncDisablePlatformCollider().Forget();
                 }
             }
